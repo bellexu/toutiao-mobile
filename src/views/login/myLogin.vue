@@ -61,7 +61,7 @@
       </van-field>
       <!-- 登录按钮 -->
        <div class="login-btn-wrap">
-       <van-button class="login-btn" type="info" block>登录</van-button>
+        <van-button class="login-btn" type="info" block>登录</van-button>
      </div>
     </van-form>
      
@@ -115,6 +115,9 @@ export default {
         Toast.success('登录成功')  
         //将后端返回的用户登录状态（token等数据放到 vuex 容器中）
         this.$store.commit('setUser', res.data.data)
+
+        //登录成功，跳转回原来页面
+        this.$router.back()  //先用这种方式，但是它不太好
      } catch(err) {
        Toast.fail('登录失败，手机号或验证码错误')
      }

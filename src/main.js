@@ -14,6 +14,9 @@ import 'amfe-flexible'
 //加载全局样式,放到最后，避免优先级
 import './style/index.less'
 
+import './utils/dayjs'
+
+
 
 //注册使用vant组件
 Vue.use(Vant)

@@ -3,7 +3,7 @@
       <!-- 子路由出口 -->
     <router-view></router-view>
       <!-- 底部导航栏 -->
-       <van-tabbar class="layout-tabbar" v-model="active" route>
+       <van-tabbar class="layout-tabbar" v-model="active" routes>
         <van-tabbar-item to="/">
         <i slot="icon" class="toutiao toutiao-shouye"></i>
         <span class="text">首页</span>
